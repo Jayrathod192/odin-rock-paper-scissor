@@ -11,48 +11,50 @@
 </head> 
 <body>
     <div class="grid-3-cols">
-        <div id="player-section">
+        <div id="player-section" class="playerSection">
             <div class="player-info">
                 <ion-icon name="person-outline" class="icon"></ion-icon>
                 <h3>Player</h3>
             </div>
-            <h3 class="playerSelection"></h3>
-            <h3 class="playerScore"></h3>
-            <div class="player-imgs">
-                <img class="img" src="/img/rock.png" id="rock">
-                <img class="img" src="/img/paper.png" id="paper">
-                <img class="img" src="/img/scissor.png" id="scissor">
+            <h3 class="playerChoice"></h3>
+            <!-- <h3 class="playerScore"></h3> -->
+            <div class="playerImgs">
+                <img class="pImg img" src="/img/rock.png" id="rock">
+                <img class="pImg img" src="/img/paper.png" id="paper">
+                <img class="pImg img" src="/img/scissor.png" id="scissors">
             </div>    
         </div>
         <div class="score">
             <h1>Score</h1>
+            <h3 class="ties">Ties : 0</h3>
             <div>
-                <h1 class="ties">0</h1>
-                <h1><span>:</span></h1>
-                <h1 class="ties">0</h1>
+                
+                <h3 class="playerScore">0</h3>
+                <h3><span>:</span></h3>
+                <h3 class="computerScore">0</h3>
             </div>
         </div>
-        <div id="computer-section">
+        <div id="computerSection" class="computerSection">
             <div class="player-info">
                 <ion-icon name="skull-outline" class="icon"></ion-icon>
                 <h3>Computer</h3>
             </div>
             
-            <h3 class="computerSelection"></h3>
+            <h3 class="computerChoice"></h3>
             <h3 class="computerScore"></h3>
-            <div class="computer-imgs">
-                <img class="img" src="/img/rock.png" id="rock">
-                <img class="img" src="/img/paper.png" id="paper">
-                <img class="img" src="/img/scissor.png" id="scissor">
+            <div class="computerImgs">
+                <img class="rock img" src="/img/rock.png" id="rock">
+                <img class="paper img" src="/img/paper.png" id="paper">
+                <img class="scissors img" src="/img/scissor.png" id="scissors">
             </div>    
         </div>
     </div>
     
     <div class="winner-div">
         <h1 class="winner"></h1>
-        <button class="reset" onclick="resetgame()">Play Again?</button>
+        <button class="reset" onclick="resetGame()">Play Again?</button>
     </div>
     
-    <script src="/script.js"></script> 
+    <script src="/main.js"></script> 
 </body>
 </html>

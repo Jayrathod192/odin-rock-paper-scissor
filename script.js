@@ -42,13 +42,13 @@ function playRound(playerSelection, computerSelection) {
         if(computerSelection === "scissors"){
             // pEl.textContent = 
             playerScore++
-            return "You Won! Rock beats Scissor"
+            return "player"
         }
         else{
             // pEl.textContent = 
             computerScore++
             // updateScore()
-            return "You Lose! Rock beats Scissor"
+            return "player"
         }
     }
     if(playerSelection === "paper")
@@ -57,13 +57,13 @@ function playRound(playerSelection, computerSelection) {
             // pEl.textContent = 
             computerScore++
             // updateScore()
-            return "You Lose! Scissor beats paper"
+            return "computer"
         }
         else{
             // pEl.textContent = 
             playerScore++
             // updateScore()
-            return "You Won! Scissor beats paper"
+            return "player"
         } 
     }
     if(playerSelection === "scissors")
@@ -72,12 +72,12 @@ function playRound(playerSelection, computerSelection) {
             // pEl.textContent = 
             computerScore++
             // updateScore()
-            return "You Lose! Rock beats Scissor"
+            return "computer"
         }
         else{
             // pEl.textContent = 
             playerScore++
-            return "You Won! Rock beats Scissor"
+            return "player"
         }
     }
     
@@ -95,20 +95,28 @@ function game()
     //     pEl.textContent = playRound(playerSelection, computerSelection)
 
     // }
-    if(playerScore > computerScore){
-        return 'You beat computer'
-    }
-    else if(computerScore > playerScore)
-    {
-        return 'computer beats you'
-    }
-    else{
-        return 'tie'
-    }
+    // if(playerScore > computerScore){
+    //     return 'You beat computer'
+    // }
+    // else if(computerScore > playerScore)
+    // {
+    //     return 'computer beats you'
+    // }
+    // else{
+    //     return 'tie'
+    // }
+
+    playRound()
     
 }
 
 console.log(game())
+
+function setWins(){
+    const pWinCount = winners.filter((item) => item == 'player').length;
+    const cWinCount = winners.filter((item) => item == 'computer').length;
+    const tie =  winners.filter((item) => item == 'tie').length;
+}
 
 
 
