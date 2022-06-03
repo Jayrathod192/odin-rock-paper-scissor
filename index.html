@@ -5,12 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head> 
 <body>
-    <h1 id="player-el">player : <span id="playerScore"></span></h1>
-    <h1 id="comp-el">computer : <span id="computerScore"></span></h1>
-    <p id="p-el"></p>
-    <h4 id="h4-el"></h4>
+    <div class="grid-3-cols">
+        <div id="player-section">
+            <div class="player-info">
+                <ion-icon name="person-outline" class="icon"></ion-icon>
+                <h3>Player</h3>
+            </div>
+            <h3 class="playerSelection"></h3>
+            <h3 class="playerScore"></h3>
+            <div class="player-imgs">
+                <img class="img" src="/img/rock.png" id="rock">
+                <img class="img" src="/img/paper.png" id="paper">
+                <img class="img" src="/img/scissor.png" id="scissor">
+            </div>    
+        </div>
+        <div class="score">
+            <h1>Score</h1>
+            <div>
+                <h1 class="ties">0</h1>
+                <h1><span>:</span></h1>
+                <h1 class="ties">0</h1>
+            </div>
+        </div>
+        <div id="computer-section">
+            <div class="player-info">
+                <ion-icon name="skull-outline" class="icon"></ion-icon>
+                <h3>Computer</h3>
+            </div>
+            
+            <h3 class="computerSelection"></h3>
+            <h3 class="computerScore"></h3>
+            <div class="computer-imgs">
+                <img class="img" src="/img/rock.png" id="rock">
+                <img class="img" src="/img/paper.png" id="paper">
+                <img class="img" src="/img/scissor.png" id="scissor">
+            </div>    
+        </div>
+    </div>
+    
+    <div class="winner-div">
+        <h1 class="winner"></h1>
+        <button class="reset" onclick="resetgame()">Play Again?</button>
+    </div>
+    
     <script src="/script.js"></script> 
 </body>
 </html>

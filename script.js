@@ -6,8 +6,14 @@ let playerPoints = document.getElementById("playerScore")
 let computerPoints = document.getElementById("computerScore")
 let computerScore = 0;
 let playerScore = 0;
+const buttons = document.querySelectorAll('button')
 const winners = []
 
+// buttons.forEach((button) => {
+//     button.addEventListener('click', () => {
+//         alert(button.textContent)
+//     });
+// });
 
 function computer(){
 
@@ -81,14 +87,14 @@ function playRound(playerSelection, computerSelection) {
 function game()
 {
    
-    for(let i=0;i<5;i++)
-    {
-        const playerSelection = prompt('Choose Rock , Paper or Scissors','Rock, Paper, Scissors').toLowerCase()
+    // for(let i=0;i<5;i++)
+    // {
+    //     const playerSelection = prompt('Choose Rock , Paper or Scissors','Rock, Paper, Scissors').toLowerCase()
 
-        const computerSelection = computer()
-        pEl.textContent = playRound(playerSelection, computerSelection)
+    //     const computerSelection = computer()
+    //     pEl.textContent = playRound(playerSelection, computerSelection)
 
-    }
+    // }
     if(playerScore > computerScore){
         return 'You beat computer'
     }
