@@ -58,11 +58,12 @@ function displayEnd() {
   document.querySelector(".reset").style.display = "flex";
   document.querySelector(".reset").style.padding = '16px 32px';
   document.querySelector(".reset").style.borderRadius = '12px';
-  document.querySelector(".reset").style.fontSize = '18px';
+  document.querySelector(".reset").style.fontSize = '20px';
   document.querySelector(".reset").style.fontWeight = '700';
   document.querySelector(".reset").style.backgroundColor = '#343a40';
   document.querySelector(".reset").style.color = '#f1f3f5';
-  document.querySelector(".reset").style.marginTop = '10px';
+  document.querySelector(".reset").style.marginTop = '20px';
+  document.querySelector(".reset").style.letterSpacing = '2px';
 }
 
 function displayRound(playerChoice, computerChoice, winner) {
