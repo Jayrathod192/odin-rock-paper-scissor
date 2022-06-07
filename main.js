@@ -17,8 +17,8 @@ function startGame() {
   let imgs = document.querySelectorAll(".pImg");
   imgs.forEach((img) =>
     img.addEventListener("click", () => {
-      if (img.id) {
-        return playRound(img.id);
+      if (img.class) {
+        return playRound(img.textContent);
       }
     })
   );
@@ -151,9 +151,9 @@ function checkWinner(choice1, choice2) {
     }
 }
 
-function setWins() {
-  const pWinCount = winners.filter((item) => item == "Player").length;
-  const cWinCount = winners.filter((item) => item == "Computer").length;
-  const ties = winners.filter((item) => item == "Tie").length;
-}
+// function setWins() {
+//   const pWinCount = winners.filter((item) => item == "Player").length;
+//   const cWinCount = winners.filter((item) => item == "Computer").length;
+//   const ties = winners.filter((item) => item == "Tie").length;
+// }
 startGame();

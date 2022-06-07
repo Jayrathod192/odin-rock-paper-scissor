@@ -32,10 +32,11 @@ body{
 }
 
 .grid-3-cols{
+    /* width: 90%; */
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
-    /* max-width: 900px; */
     margin: 100px auto;
+
 }
 
 .playerSection,.computerSection{
