@@ -17,8 +17,8 @@ function startGame() {
   let imgs = document.querySelectorAll(".pImg");
   imgs.forEach((img) =>
     img.addEventListener("click", () => {
-      if (img.class) {
-        return playRound(img.textContent);
+      if (img.id) {
+        return playRound(img.id);
       }
     })
   );
