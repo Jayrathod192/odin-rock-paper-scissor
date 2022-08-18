@@ -14,7 +14,7 @@ function resetGame() {
 
 function startGame() {
   //play the game until someone wins 5 times
-  let imgs = document.querySelectorAll(".pImg");
+  let imgs = document.querySelectorAll(".icons");
   imgs.forEach((img) =>
     img.addEventListener("click", () => {
       if (img.id) {
@@ -56,14 +56,15 @@ function displayEnd() {
       "Sorry, the computer won 5 times";
   }
   document.querySelector(".reset").style.display = "flex";
-  document.querySelector(".reset").style.padding = '16px 32px';
-  document.querySelector(".reset").style.borderRadius = '12px';
-  document.querySelector(".reset").style.fontSize = '20px';
-  document.querySelector(".reset").style.fontWeight = '700';
-  document.querySelector(".reset").style.backgroundColor = '#343a40';
-  document.querySelector(".reset").style.color = '#f1f3f5';
-  document.querySelector(".reset").style.marginTop = '20px';
-  document.querySelector(".reset").style.letterSpacing = '2px';
+  document.querySelector(".reset").style.padding = "16px 32px";
+  document.querySelector(".reset").style.borderRadius = "12px";
+  document.querySelector(".reset").style.fontSize = "20px";
+  document.querySelector(".reset").style.fontWeight = "700";
+  document.querySelector(".reset").style.backgroundColor = "#343a40";
+  document.querySelector(".reset").style.color = "#f1f3f5";
+  document.querySelector(".reset").style.marginTop = "20px";
+  document.querySelector(".reset").style.letterSpacing = "2px";
+  document.querySelector(".reset").style.cursor = "pointer";
 }
 
 function displayRound(playerChoice, computerChoice, winner) {
@@ -118,37 +119,31 @@ function checkWins() {
 }
 
 function checkWinner(choice1, choice2) {
-    if(choice1 === choice2){
-        return 'Tie'
+  if (choice1 === choice2) {
+    return "Tie";
+  }
+
+  if (choice1 === "rock") {
+    if (choice2 === "scissors") {
+      return "Player";
+    } else {
+      return "Computer";
     }
-    
-    if(choice1 === "rock")
-    {
-        if(choice2 === "scissors"){
-            return "Player"
-        }
-        else{
-            return "Computer"
-        }
+  }
+  if (choice1 === "paper") {
+    if (choice2 === "scissors") {
+      return "Computer";
+    } else {
+      return "Player";
     }
-    if(choice1 === "paper")
-    {
-        if(choice2 === "scissors"){
-            return "Computer"
-        }
-        else{
-            return "Player"
-        } 
+  }
+  if (choice1 === "scissors") {
+    if (choice2 === "rock") {
+      return "Computer";
+    } else {
+      return "Player";
     }
-    if(choice1 === "scissors")
-    {
-        if(choice2 === "rock"){
-            return "Computer"
-        }
-        else{
-            return "Player"
-        }
-    }
+  }
 }
 
 // function setWins() {
